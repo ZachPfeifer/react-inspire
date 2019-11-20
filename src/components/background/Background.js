@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 
 export default class Background extends Component {
   render() {
-    console.log(this.props.image)// Shows props from state on app.js
+    // console.log(this.props.image)// Shows props from state on app.js
 
     return (
       <div >
