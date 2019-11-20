@@ -1,9 +1,21 @@
 .App {
-  text-align: center;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
 }
 
-.App-logo {
-  height: 40vmin;
+.App-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 40px;
+}
+
+.App-link {
+  color: #09d3ac;
 }
 
 .App-header {
@@ -17,10 +29,137 @@
   color: white;
 }
 
-.App-link {
-  color: #09d3ac;
+.App-logo {
+  height: 40vmin;
+}
+
+@media (min-width: 650px ) {
+    .App {
+        background-position: center center;
+    }
+
+    .App-content {
+        align-items: flex-end;
+        justify-content: center;
+    }
+}
+
+.card-size{
+  max-width: 18rem;
 }
 
 p {
   text-transform: capitalize;
+}
+
+
+/*SECTION  OLD PROJECT CSS */
+body{
+  background-color: black
+}
+/* #clock{
+ position: fixed;
+  width: 90%;
+  bottom: 50%;
+  left: 50%;
+  font-size: 40%;
+} */
+
+.clock {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translateX(-50%) translateY(-50%);
+    color: white;
+    font-size: 60px;
+    font-family: 'Nova Cut', cursive;
+    letter-spacing: 7px;
+    opacity: .8;
+   /* z-index: auto; */
+   /* new MAYBE Stuff */
+  width: 500px;
+	height: 500px;
+	transform: skew(20deg);
+	background: #555;
+}
+
+#todo-error{
+  color: red;
+  font-size: 2em;
+}
+#bg-image{
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-position: center;
+  position: center; */
+  
+}
+.quotes-pos{
+  position: fixed;
+  width: 90%;
+  bottom: 0%;
+  left: 84%;
+    opacity: .8;
+
+}
+.weather{
+   position: fixed;
+  width: 60%;
+  bottom: 60%;
+  left: 84%;
+  fill-opacity: unset;
+      opacity: .8;
+
+}
+
+.todo-pos{
+ position: fixed;
+  width: 60%;
+  bottom: 20%;
+  left: 1%;
+  size: 20%;
+      opacity: .8;
+
+}
+.td-op{
+      opacity: .8;
+
+}
+
+.hr-todo{
+  color: black;
+   height: 0px;
+    border: none;
+    border-top: 3px solid black;
+    opacity: 3;
+}
+
+.row-1 {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-top: 50px;
+}
+
+.uppercase{
+  text-transform: uppercase;
+}
+
+.redx{
+color: brown;
+cursor: pointer;}
+
+.strikethrough:unchecked+ span{
+text-decoration: none;
+}
+.strikethrough:checked + span{
+  text-decoration:line-through;
+}
+
+input.largerCheckbox {
+  width: 22px;
+  height: 18px;
 }

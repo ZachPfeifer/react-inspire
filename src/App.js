@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import Axios from 'axios'
-
 import './App.css';
-import Background from './components/background/Background'
+// import Background from './components/background/Background'
 import Quote from './components/quote/Quote'
 import Weather from './components/weather/Weather'
+
 
 
 export default class App extends Component {
@@ -44,6 +44,9 @@ export default class App extends Component {
   }
 
 
+  //IMAGE
+
+
   //SECTION APP Render
   render() {
     // console.log(this.state.image)
@@ -52,7 +55,11 @@ export default class App extends Component {
 
 
     return (
-      <div className="App">
+      <div className="App container-fluid"
+        style={{ backgroundImage: `url(${this.state.image})` }}
+      >
+        {/* <Background image={this.state.image} /> */}
+
         <Weather
           weather={this.state.weather}
           main={this.state.main}
@@ -60,7 +67,6 @@ export default class App extends Component {
 
         <Quote quote={this.state.quote} />
 
-        <Background image={this.state.image} />
 
 
       </div>
@@ -68,3 +74,5 @@ export default class App extends Component {
     );
   }
 }
+
+
