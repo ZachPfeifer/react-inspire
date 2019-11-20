@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react'
+import Axios from 'axios'
+
 import './App.css';
+import Background from './components/background/Background'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+export default class App extends Component {
+
+  //SECTION State
+  state = {
+    image: {}
+  }
+
+  //SECTION API IMAGE GET
+  componentDidMount() {
+    Axios.get('//bcw-sandbox.herokuapp.com/api/images')
+      .then(res => this.setState({
+        image: res.data.large_url
+      }))
+  }
+
+
+  //SECTION APP Render
+  render() {
+    console.log(this.state.image)
+
+    return (
+      <div className="App">
+
+        <Background image={this.state.image} />
+
+
+      </div>
+
+    );
+  }
 }
-
-export default App;
