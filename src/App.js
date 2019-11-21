@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Axios from 'axios'
+import Clock from 'react-clock';
 import './App.css';
 // import Background from './components/background/Background'
 import Quote from './components/quote/Quote'
@@ -16,6 +17,8 @@ export default class App extends Component {
     weather: [],
     main: {},
     sys: {},
+    details: [],
+    date: new Date(),
 
   }
 
@@ -40,7 +43,13 @@ export default class App extends Component {
         main: res.data.main,
         // main: ((res.data.main.temp - 273.15) * 1.8 + 32).toFixed(0),
         sys: res.data.sys,
+        details: res.data.weather[0]
       }))
+
+    setInterval(
+      () => this.setState({ date: new Date() }),
+      1000
+    );
   }
 
 
@@ -63,10 +72,15 @@ export default class App extends Component {
         <Weather
           weather={this.state.weather}
           main={this.state.main}
-          sys={this.state.sys} />
+          sys={this.state.sys}
+          details={this.state.details} />
 
         <Quote quote={this.state.quote} />
-
+        <div className="">
+          <Clock
+            value={this.state.date}
+          />
+        </div>
 
 
       </div>
