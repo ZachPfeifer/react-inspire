@@ -1,26 +1,24 @@
 import React, { Component } from 'react';
-import Clock from 'react-clock';
 
-class timeClock extends Component {
+export default class MyClock extends Component {
+
   state = {
-    date: new Date(),
+    date: new Date()
   }
 
-  componentDidMount() {
-    setInterval(
-      () => this.setState({ date: new Date() }),
-      1000
-    );
+  callMe() {
+    setInterval(() => {
+      this.setState({ date: new Date() })
+    }, 1000);
   }
 
   render() {
     return (
-      <div>
-        <p>Current time:</p>
-        <Clock
-          value={this.state.date}
-        />
+      <div className="clock">
+        <h1>{this.state.date.toLocaleTimeString()}</h1>
+        {this.callMe()}
       </div>
     );
   }
 }
+

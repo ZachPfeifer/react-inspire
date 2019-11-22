@@ -5,6 +5,7 @@ import './App.css';
 // import Background from './components/background/Background'
 import Quote from './components/quote/Quote'
 import Weather from './components/weather/Weather'
+import MyClock from './components/clock/clock'
 
 
 
@@ -18,7 +19,7 @@ export default class App extends Component {
     main: {},
     sys: {},
     details: [],
-    date: new Date(),
+    // date: new Date(),
 
   }
 
@@ -46,10 +47,10 @@ export default class App extends Component {
         details: res.data.weather[0]
       }))
 
-    setInterval(
-      () => this.setState({ date: new Date() }),
-      1000
-    );
+    // setInterval(
+    //   () => this.setState({ date: new Date() }),
+    //   1000
+    // );
   }
 
 
@@ -76,11 +77,10 @@ export default class App extends Component {
           details={this.state.details} />
 
         <Quote quote={this.state.quote} />
-        <div className="">
-          <Clock
+        <MyClock />
+        {/* <Clock
             value={this.state.date}
-          />
-        </div>
+          /> */}
 
 
       </div>

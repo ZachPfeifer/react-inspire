@@ -95,30 +95,43 @@ body{
   
 }
 .quotes-pos{
-  position: fixed;
-  width: 90%;
-  bottom: 0%;
-  left: 84%;
-    opacity: .8;
+  /* position: fixed;
+  width: 90%; */
+  /* bottom: -33%;
+  left: 75%; */
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  font-size: 18px;
+  fill-opacity: unset;
+  opacity: .8;
 
 }
-.weather{
-   position: fixed;
-  width: 60%;
-  bottom: 60%;
-  left: 84%;
-  fill-opacity: unset;
-      opacity: .8;
-
+.weather-pos{
+    /* position: fixed; */
+    /* width: 60%; */
+    /* top: 2%;
+    left: 75%; */
+   position: absolute;
+   top: 8px;
+   right: 16px;
+   font-size: 18px;
+   fill-opacity: unset;
+   opacity: .8;
 }
 
 .todo-pos{
- position: fixed;
+ /* position: fixed;
   width: 60%;
-  bottom: 20%;
-  left: 1%;
+  bottom: 20%; */
+  /* left: 1%; */
+ position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 18px;
+  
   size: 20%;
-      opacity: .8;
+  opacity: .8;
 
 }
 .td-op{

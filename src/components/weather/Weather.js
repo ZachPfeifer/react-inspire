@@ -8,7 +8,7 @@ export default class Weather extends Component {
 
 
     return (
-      <div className="card text-center w-25 p-2 text-white bg-dark mb-3">
+      <div className="card text-center w-25 p-2 text-white bg-dark mb-3 weather-pos">
         <div className="card-header">
           <h4><b>Today's Weather</b></h4>
         </div>
@@ -19,13 +19,13 @@ export default class Weather extends Component {
             <i className="fas fa-cloud-sun"></i> | {((this.props.main.temp - 273.15) * 1.8 + 32).toFixed(0)}°F
           </h5>
           <h5>Condition: {this.props.details.description}</h5>
-          <p className="card-text">
+          {/* <p className="card-text">
             {this.props.weather.visibility}
             <br />
             Sunrise: {this.props.sys.sunrise}
             <br />
             Sunset: {this.props.sys.sunset}
-          </p>
+          </p> */}
           <button className="btn btn-secondary">Refresh</button>
         </div>
         <div className="card-footer text-muted">
