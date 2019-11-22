@@ -71,17 +71,25 @@ body{
     left: 40%;
     transform: translateX(-50%) translateY(-50%);
     color: white;
-    font-size: 60px;
+    font-size: 70px;
     font-family: 'Nova Cut', cursive;
     letter-spacing: 7px;
     opacity: .8;
    /* z-index: auto; */
    /* new MAYBE Stuff */
   width: 500px;
-	height: 500px;
+	height: 50%;
 	transform: skew(20deg);
 	background: #555;
 }
+.clock-pos{
+    position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+
 
 #todo-error{
   color: red;

@@ -6,7 +6,7 @@ export default class MyClock extends Component {
     date: new Date()
   }
 
-  callMe() {
+  updateTime() {
     setInterval(() => {
       this.setState({ date: new Date() })
     }, 1000);
@@ -15,8 +15,8 @@ export default class MyClock extends Component {
   render() {
     return (
       <div className="clock">
-        <h1>{this.state.date.toLocaleTimeString()}</h1>
-        {this.callMe()}
+        <div className="clock-pos">{this.state.date.toLocaleTimeString()}</div>
+        {this.updateTime()}
       </div>
     );
   }

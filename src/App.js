@@ -5,7 +5,7 @@ import './App.css';
 // import Background from './components/background/Background'
 import Quote from './components/quote/Quote'
 import Weather from './components/weather/Weather'
-import MyClock from './components/clock/clock'
+import MyClock from './components/clock/Clock'
 
 
 

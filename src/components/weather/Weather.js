@@ -8,7 +8,7 @@ export default class Weather extends Component {
 
 
     return (
-      <div className="card text-center w-25 p-2 text-white bg-dark mb-3 weather-pos">
+      <div className="card card-size text-center w-25 p-2 text-white bg-dark mb-3 weather-pos">
         <div className="card-header">
           <h4><b>Today's Weather</b></h4>
         </div>
