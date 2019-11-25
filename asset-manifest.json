@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/react-inspire/static/css/main.a5fe5bb5.chunk.css",
+    "main.js": "/react-inspire/static/js/main.7335a3a5.chunk.js",
+    "main.js.map": "/react-inspire/static/js/main.7335a3a5.chunk.js.map",
+    "runtime-main.js": "/react-inspire/static/js/runtime-main.392cddb9.js",
+    "runtime-main.js.map": "/react-inspire/static/js/runtime-main.392cddb9.js.map",
+    "static/css/2.b0bb7f2c.chunk.css": "/react-inspire/static/css/2.b0bb7f2c.chunk.css",
+    "static/js/2.2608d85a.chunk.js": "/react-inspire/static/js/2.2608d85a.chunk.js",
+    "static/js/2.2608d85a.chunk.js.map": "/react-inspire/static/js/2.2608d85a.chunk.js.map",
+    "index.html": "/react-inspire/index.html",
+    "precache-manifest.827331ae4ae27d17e526693879cce5d5.js": "/react-inspire/precache-manifest.827331ae4ae27d17e526693879cce5d5.js",
+    "service-worker.js": "/react-inspire/service-worker.js",
+    "static/css/2.b0bb7f2c.chunk.css.map": "/react-inspire/static/css/2.b0bb7f2c.chunk.css.map",
+    "static/css/main.a5fe5bb5.chunk.css.map": "/react-inspire/static/css/main.a5fe5bb5.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.392cddb9.js",
+    "static/css/2.b0bb7f2c.chunk.css",
+    "static/js/2.2608d85a.chunk.js",
+    "static/css/main.a5fe5bb5.chunk.css",
+    "static/js/main.7335a3a5.chunk.js"
+  ]
+}
