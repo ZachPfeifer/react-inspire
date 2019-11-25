@@ -128,6 +128,18 @@ body{
    opacity: .8;
 }
 
+.todo{
+  max-width: 25rem;
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 18px;
+  
+  size: 20%;
+  opacity: .8;
+
+}
+
 .todo-pos{
  /* position: fixed;
   width: 60%;
@@ -142,10 +154,7 @@ body{
   opacity: .8;
 
 }
-.td-op{
-      opacity: .8;
 
-}
 
 .hr-todo{
   color: black;
@@ -184,3 +193,4 @@ input.largerCheckbox {
   width: 22px;
   height: 18px;
 }
+

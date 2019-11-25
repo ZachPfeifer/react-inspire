@@ -20,8 +20,11 @@ export default class AddTodo extends Component {
   //Add Todo
   render() {
     return (
-      <form onSubmit={this.onSubmit}>
+      <form
+        className="input-group mt-2"
+        onSubmit={this.onSubmit}>
         <input
+          className='form-control'
           type='text'
           name='description'
           placeholder='Add Todo...'
@@ -29,9 +32,9 @@ export default class AddTodo extends Component {
           onChange={this.onChange}
         />
         <input
+          className='btn btn-secondary'
           type='submit'
           value='Submit'
-          className='btn'
         />
       </form>
     )

@@ -97,6 +97,7 @@ export default class App extends Component {
     // console.log(this.state.image)
     // console.log(this.state.quote)
     // console.log(this.state.weather)
+    //console.log(this.state.todos)
 
 
     return (
@@ -116,10 +117,19 @@ export default class App extends Component {
         {/* <Clock
             value={this.state.date}
           /> */}
-
-        <Todos todos={this.state.todos} markComplete={this.markComplete} deleteTodo={this.deleteTodo} />
-
-        <AddTodo addTodo={this.addTodo} />
+        <div className="card text-white bg-dark mx-auto todo">
+          <h1 className="text-center"><b>To Do List: </b></h1>
+          <div className="card-body">
+            <Todos
+              todos={this.state.todos}
+              markComplete={this.markComplete}
+              deleteTodo={this.deleteTodo}
+            />
+            <div className="card-footer">
+              <AddTodo addTodo={this.addTodo} />
+            </div>
+          </div>
+        </div>
 
 
       </div>

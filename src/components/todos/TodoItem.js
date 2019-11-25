@@ -2,20 +2,37 @@
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { relative, isAbsolute } from 'path'
 
 
 export default class TodoItem extends Component {
 
+  Strikethrough = () => {
+    return {
+      textDecoration: this.props.todo.completed ?
+        'line-through' : 'none',
+    }
+  }
+
   render() {
     const { _id, description } = this.props.todo //Alias out long prop
     return (
-      <div>
-        <p>
-          <input type="checkbox" onChange={this.props.markComplete.bind(this, _id)} />
-          {description}
-          <button
-            onClick={this.props.deleteTodo.bind(this, _id)}>X</button>
-        </p>
+      <div className="row">
+        <div
+          className="col"
+          style={this.Strikethrough()}>
+          <p>
+            <input
+              className="strikethrough largerCheckbox "
+              type="checkbox"
+              onChange={this.props.markComplete.bind(this, _id)}
+            />
+            {description}
+            <button
+              className="btn btn-danger redx float-right mx-auto"
+              onClick={this.props.deleteTodo.bind(this, _id)}> X</button>
+          </p>
+        </div>
       </div>
     )
   }
