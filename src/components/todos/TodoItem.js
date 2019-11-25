@@ -2,7 +2,6 @@
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { relative, isAbsolute } from 'path'
 
 
 export default class TodoItem extends Component {
@@ -23,7 +22,7 @@ export default class TodoItem extends Component {
           style={this.Strikethrough()}>
           <p>
             <input
-              className="strikethrough largerCheckbox "
+              className="strikethrough largerCheckbox"
               type="checkbox"
               onChange={this.props.markComplete.bind(this, _id)}
             />

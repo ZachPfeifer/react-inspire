@@ -5,6 +5,9 @@ export default class Weather extends Component {
     console.log(this.props) //hows props from state on app.js
     //        description: data.weather[0].description,
 
+    function refreshPage() {
+      window.location.reload(false);
+    }
 
 
     return (
@@ -26,7 +29,7 @@ export default class Weather extends Component {
             <br />
             Sunset: {this.props.sys.sunset}
           </p> */}
-          <button className="btn btn-secondary">Refresh</button>
+          <button className="btn btn-secondary" onClick={refreshPage}>Refresh</button>
         </div>
         <div className="card-footer text-muted">
           Today
