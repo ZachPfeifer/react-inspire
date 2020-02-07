@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 export default class Weather extends Component {
   render() {
-    console.log(this.props) //hows props from state on app.js
+    // console.log(this.props) //hows props from state on app.js
     //        description: data.weather[0].description,
 
     function refreshPage() {

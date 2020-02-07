@@ -80,16 +80,35 @@ export default class App extends Component {
       )
   }
   //Toggle Complete
+  // markComplete = (_id) => {
+  //   Axios.put(`https://bcw-sandbox.herokuapp.com/api/zachp/todos/${_id}`)
+  //   this.setState({
+  //     todos: this.state.todos.map(todo => {
+  //       if (todo._id === _id) {
+  //         todo.completed = !todo.completed
+  //       }
+  //       console.log(todo);
+  //       return todo;
+
+  //     })
+  //   })
+  // }
+
+  // Toggle Complete FIXME 
   markComplete = (_id) => {
-    this.setState({
-      todos: this.state.todos.map(todo => {
-        if (todo._id === _id) {
-          todo.completed = !todo.completed
-        }
-        return todo;
+    Axios.put(`https://bcw-sandbox.herokuapp.com/api/zachp/todos/${_id}`)
+      .then(res => this.setState({
+        todos: this.state.todos.map(todo => {
+          if (todo._id === _id) {
+            todo.completed = !todo.completed
+          }
+          console.log(todo, this.state.todos, res.data);
+          return todo;
+        })
       })
-    })
+      )
   }
+
 
 
   //SECTION APP Render
